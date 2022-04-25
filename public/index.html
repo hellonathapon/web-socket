@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Web Socket</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+
+    <form id="form">
+        <input type="text" placeholder="Message">
+        <button type="submit">Send</button>
+    </form>
+<script src="http://localhost:5000/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  const id = document.getElementById("form");
+  id.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("hi")
+  })
+</script>
+</body>
+</html>
